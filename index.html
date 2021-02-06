@@ -3,13 +3,32 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Template</title>
+    <title>Infinite Scroll</title>
     <link rel="stylesheet" href="style.css">
-    <link rel="icon" type="image/png" href="https://www.google.com/s2/u/0/favicons?domain=css-tricks.com">
+    <link rel="apple-touch-icon" sizes="180x180" href="img/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="img/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="img/favicon/favicon-16x16.png">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" crossorigin="anonymous" />
 </head>
 <body>
-    <i class="fas fa-closed-captioning"></i>
+    <h1 id="top">Infinite Scroll</h1>
+    
+    <ul class="bar" id='bar'>
+        <li class="onoffswitch">
+            <input type="checkbox" name="onoffswitch" class="onoffswitch-checkbox" id="myonoffswitch" tabindex="0" checked onclick='changeToLight("lightMode")'>
+            <label class="onoffswitch-label" for="myonoffswitch">
+                <span class="onoffswitch-inner"></span>
+                <span class="onoffswitch-switch"></span>
+            </label>
+        </li>
+        <li class="folderButton" id="folderButton" onlick='openFolder()'><button class="fav-button"><i class="fas fa-star icon-d folder"></i></button></li>
+    </ul>
+    
+    <div class="loader" id="loader">
+        <img src="loader.svg" alt="Loading...">
+    </div>
+    <div class="img-container" id="img-container">
+    </div>
  <!-- Script -->
  <script src="script.js"></script>
 </body>

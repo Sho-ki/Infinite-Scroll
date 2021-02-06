@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Tinos:wght@700&display=swap');
+
 html{
     box-sizing: border-box;
 }
@@ -5,5 +7,185 @@ html{
 body {
     margin: 0;
     min-height: 100vh;
-    background-color: #e3edf1;
+    font-family: 'Tinos', serif;
+    background-color: #252525;
+    color: whitesmoke;
+}
+
+.lightMode{
+    background-color: whitesmoke;
+    color: #252525
+}
+
+h1 {
+    text-align: center;
+    margin-top: 25px;
+    margin-bottom: 15px;
+    font-size: 50px;
+    letter-spacing: 7px;
+}
+
+.loader {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+}
+
+.loader img{
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.img-container{
+    margin: 10px 25%;
+    
+}
+
+.img-container img {
+    width: 100%;
+    margin-top: 5px;
+}
+
+
+ul {
+    list-style-type: none;
+}
+
+li {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.bar{
+    background-color: #74250e;
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0px;
+    z-index: 10;
+    padding: 30px;
+}
+
+.folderButton {
+    position: sticky;
+    cursor: pointer;
+}
+
+.folder {
+    font-size: 1.5rem;
+    margin: 6px;
+}
+
+/* Dark mode switch */
+.onoffswitch {
+    position: -webkit-sticky;
+    position: sticky;
+    top: 40px; 
+    width: 95px;
+    margin-right: 3rem;
+    margin-left: auto;
+    -webkit-user-select:none; -moz-user-select:none; -ms-user-select: none;
+}
+.onoffswitch-checkbox {
+    position: absolute;
+    opacity: 0;
+    pointer-events: none;
+}
+.onoffswitch-label {
+    display: block; overflow: hidden; cursor: pointer;
+    border: 2px solid #828282; border-radius: 20px;
+}
+.onoffswitch-inner {
+    display: block; width: 200%; margin-left: -100%;
+    transition: margin 0.3s ease-in 0s;
+}
+.onoffswitch-inner:before, .onoffswitch-inner:after {
+    display: block; float: left; width: 50%; height: 30px; padding: 0; line-height: 30px;
+    font-size: 15px; color: white; font-family: Trebuchet, Arial, sans-serif; font-weight: bold;
+    box-sizing: border-box;
+}
+.onoffswitch-inner:before {
+    content: "Dark";
+    padding-left: 10px;
+    background-color: #525252; color: #FFFFFF;
+}
+.onoffswitch-inner:after {
+    content: "Light";
+    padding-right: 10px;
+    background-color: #DEFFFE; color: #2B2B2B;
+    text-align: right;
+}
+.onoffswitch-switch {
+    display: block; width: 18px; margin: 6px;
+    background: #FFFFFF;
+    position: absolute; top: 0; bottom: 0;
+    right: 64px;
+    border: 2px solid #828282; border-radius: 20px;
+    transition: all 0.3s ease-in 0s; 
+}
+.onoffswitch-checkbox:checked + .onoffswitch-label .onoffswitch-inner {
+    margin-left: 0;
+}
+.onoffswitch-checkbox:checked + .onoffswitch-label .onoffswitch-switch {
+    right: 0px; 
+}
+
+.star {
+    position: absolute;
+    left: 92%;
+    bottom: 5%;
+    font-size: 1.5em;
+}
+
+.icon-d{
+    color: yellow;
+    fill: yellow;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: orange;
+}
+
+.imageParent {
+    position: relative;
+}
+
+
+.close{
+    cursor: pointer;
+    color: #d58d78;
+    z-index: 10;
+    font-size: 1.5rem;
+    margin: 6px;
+}
+
+@media screen and (max-width: 600px){
+    h1{
+        font-size: 20px;
+    }
+
+    .img-container{
+        margin: 10px;
+    }
+
+    .onoffswitch{
+        top: 20px;
+        margin-right: 0rem; 
+    }
+
+    .folderButton{
+        margin-left: 10px;
+    }
+}
+
+.fav-button {
+    border-radius: 30px;
+    border: none;
+    background-color: rgb(223, 223, 223);
+    outline: none;
+}
+
+.fav-button:hover{
+    background-color: rgb(122, 122, 122);
 }
